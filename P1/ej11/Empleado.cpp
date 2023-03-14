@@ -9,9 +9,9 @@ private:
     // char *nombre;
 
 public:
-    virtual string getNombre();
-    virtual void setNombre(string);
-    virtual float getTotal();
+    string getNombre();
+    void setNombre(string) = 0;
+    virtual float getTotal() = 0;
 };
 
 class Jornalero : public Empleado
@@ -87,5 +87,3 @@ Comun::Comun(string nom, float sueldo)
 };
 
 float Comun::getTotal() { return this->sueldo; };
-
-float Empleado::getTotal() { return 0; }
